@@ -30,9 +30,7 @@ db.on("error", (error) => {
 });
 
 // routes here
-app.get("/", function (req, res) {
-	res.sendFile("./public/index.html");
-});
+
 app.use(require("./routes/api.js"));
 
 app.listen(PORT, () => {

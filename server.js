@@ -15,11 +15,15 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
-	useNewUrlParser: true,
-	useFindAndModify: false,
-	useUnifiedTopology: true,
-});
+mongoose.connect(
+	process.env.MONGODB_URI ||
+		"mongodb://user11:user11@ds235947.mlab.com:35947/heroku_m8pntnf4",
+	{
+		useNewUrlParser: true,
+		useFindAndModify: false,
+		useUnifiedTopology: true,
+	}
+);
 
 const databaseUrl = process.env.MONGODB_URI || "budget";
 const collections = ["budget"];
